@@ -81,7 +81,7 @@ section {
 .header-image {
     grid-area: img;
     width: 100%;
-    margin: 1em 0 -1em;
+    margin: .5em 0 -.5em;
 }
 
 /* Grid utility for mobile layout */
@@ -111,13 +111,35 @@ section {
     justify-content: space-evenly;
     margin-top: 0;
     padding: 1em 1em;  
+    z-index: 5;
 }
 
 .nav-list > li > a {
+    position: relative;
     color: var(--clr-accent-700);
     text-decoration: none;
     text-transform: uppercase;
     font-weight: var(--fw-reg);
+    transition: all 300ms ease-in-out;
+    padding-top: 5px;
+    
+}
+
+.nav-list > li > a::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    background-color: hsl(350, 100%, 31%);
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -3px;
+    z-index: 10;
+}
+
+.nav-list > li > a:hover::after {
+    width: 100%;    
+    transition: all 300ms ease-in-out;
 }
 
 .logo {
@@ -206,27 +228,39 @@ section {
     }
 
     .comic-container {
-        padding: 1rem 3rem 1rem 7rem !important;
+        padding: 1rem 2rem 1rem 5rem !important;
     } 
 
     .comic-nav-list>li>a {
-        padding: .5rem 1.5rem !important;
+        padding: .5rem 0.75rem !important;
     }   
 }
 
 @media only screen and (min-width: 940px) {
+    .container-grid {
+        padding: 0 11em 1em 11em;
+    }
+    
     .comic-container {
-        padding: 1rem 3rem 1rem 12rem !important;
+        padding: 1rem 2rem 1rem 9rem !important;
     } 
 }
 
 @media only screen and (min-width: 1275px) {
+    .container-grid {
+        padding: 0 12em 1em 12em;
+    }
+
     .comic-container {
         padding: 1rem 3rem 1rem 15rem !important;
     } 
 }
 
 @media only screen and (min-width: 1560px) {
+    .container-grid {
+        padding: 0 15em 1em 15em;
+    }
+
     .comic-container {
         padding: 1rem 3rem 1rem 23rem !important;
     } 
