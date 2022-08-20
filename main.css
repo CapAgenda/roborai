@@ -81,7 +81,7 @@ section {
 .header-image {
     grid-area: img;
     width: 100%;
-    margin: .5em 0 -.5em;
+    margin: 0 0 -.5em;
 }
 
 /* Grid utility for mobile layout */
