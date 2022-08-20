@@ -80,8 +80,8 @@ section {
 
 .header-image {
     grid-area: img;
-    width: 75%;
-    margin: 1em auto -1em;
+    width: 100%;
+    margin: 1em 0 -1em;
 }
 
 /* Grid utility for mobile layout */
@@ -150,10 +150,8 @@ section {
         grid-area: img;
         margin: 0 auto -1em;   
     }
-    
+
     .header-image img {
-        max-height: 150px;
-        width: auto;
         margin: 0 auto;     
     }
 
